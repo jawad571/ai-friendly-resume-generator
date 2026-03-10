@@ -9,6 +9,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { SplitPane } from './presentation/components/layout/SplitPane'
 import { MarkdownEditor } from './presentation/components/editor/MarkdownEditor'
 import { MarkdownPreview } from './presentation/components/preview/MarkdownPreview'
+import { ProfessionalPreview } from './presentation/components/preview/ProfessionalPreview'
 import { ExportButton } from './presentation/components/export/ExportButton'
 import { WelcomeMessage } from './presentation/components/welcome/WelcomeMessage'
 import { HelpButton } from './presentation/components/help/HelpButton'
@@ -133,7 +134,11 @@ function AppContent() {
           }
           rightPane={
             <div ref={previewRef} className="h-full">
-              <MarkdownPreview content={content} templateClassName={template.className} />
+              {selectedTemplate === 'professional' ? (
+                <ProfessionalPreview content={content} />
+              ) : (
+                <MarkdownPreview content={content} templateClassName={template.className} />
+              )}
             </div>
           }
         />

@@ -13,7 +13,7 @@ export type { ModernTemplate, ModernTemplateStyles } from './modern/modern'
 export { minimalTemplate } from './minimal/minimal'
 export type { MinimalTemplate, MinimalTemplateStyles } from './minimal/minimal'
 
-export type TemplateId = 'classic' | 'modern' | 'minimal'
+export type TemplateId = 'classic' | 'modern' | 'minimal' | 'professional'
 
 export interface BaseTemplate {
   id: TemplateId
@@ -74,6 +74,20 @@ export const templates: BaseTemplate[] = [
       padding: '2rem',
       sectionSpacing: '2rem',
       lineHeight: '1.75',
+    },
+  },
+  {
+    id: 'professional',
+    name: 'Professional',
+    description: 'Two-column layout with sidebar. Perfect for medical, legal, and corporate fields.',
+    className: 'template-professional-wrapper',
+    styles: {
+      fontFamily: 'Roboto, Segoe UI, Arial, sans-serif',
+      layout: 'two-column-sidebar',
+      headingColor: '#1a1a1a',
+      headingWeight: '700',
+      sectionSpacing: '25px',
+      lineHeight: '1.5',
     },
   },
 ]

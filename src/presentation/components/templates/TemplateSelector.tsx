@@ -19,6 +19,7 @@ const templates = [
   { id: 'classic', name: 'Classic' },
   { id: 'modern', name: 'Modern' },
   { id: 'minimal', name: 'Minimal' },
+  { id: 'professional', name: 'Professional' },
 ]
 
 export function TemplateSelector({
@@ -37,7 +38,7 @@ export function TemplateSelector({
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 z-50 p-4">
+        <div className="absolute right-0 top-full mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 p-4">
           <div className="flex justify-between items-center mb-4">
             <h3 className="font-semibold text-gray-800">Select Template</h3>
             <button
@@ -49,7 +50,7 @@ export function TemplateSelector({
             </button>
           </div>
 
-          <div role="listbox" className="grid grid-cols-3 gap-3">
+          <div role="listbox" className="grid grid-cols-4 gap-3">
             {templates.map((template) => (
               <TemplateThumbnail
                 key={template.id}

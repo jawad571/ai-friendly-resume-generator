@@ -325,6 +325,143 @@
 }
 
 /* ===========================================
+   PROFESSIONAL TEMPLATE - Two-Column Layout
+   Matches template.html design
+   =========================================== */
+
+.template-professional-wrapper {
+  background: #fff;
+}
+
+.professional-page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  display: flex;
+  font-family: 'Roboto', 'Segoe UI', 'Arial', sans-serif;
+  background: #fff;
+}
+
+/* Sidebar - Left Column (30%) */
+.professional-sidebar {
+  width: 30%;
+  background: #f5f5f5;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Main - Right Column (70%) */
+.professional-main {
+  width: 70%;
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+/* Name */
+.professional-name {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 5px 0;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subtitle (Job Title) */
+.professional-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Contact Info */
+.professional-contact {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.professional-contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.professional-icon {
+  font-size: 14px;
+  margin-right: 8px;
+  width: 18px;
+  text-align: center;
+}
+
+/* Sections */
+.professional-section {
+  margin-top: 25px;
+}
+
+.professional-section-title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+/* Sidebar content */
+.professional-sidebar .professional-section-content ul {
+  padding-left: 15px;
+  margin: 0;
+  list-style-type: disc;
+}
+
+.professional-sidebar .professional-section-content li {
+  margin-bottom: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Main content */
+.professional-main .professional-section-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.professional-main .professional-section-content h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 2px 0;
+  color: #1a1a1a;
+}
+
+.professional-main .professional-section-content ul {
+  padding-left: 18px;
+  margin: 4px 0 12px 0;
+  list-style-type: disc;
+}
+
+.professional-main .professional-section-content li {
+  margin-bottom: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.professional-main .professional-section-content strong {
+  font-weight: 500;
+}
+
+.professional-main .professional-section-content em {
+  font-style: normal;
+  font-size: 12px;
+  color: #666;
+}
+
+.professional-main .professional-section-content a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* ===========================================
    Print & PDF Styles - Prevent Page Breaks
    =========================================== */
 
@@ -396,6 +533,22 @@
 .pdf-export h3 + ul,
 .pdf-export p + ul {
   page-break-before: avoid !important;
+}
+
+/* Professional Template PDF Export */
+.pdf-export .professional-page {
+  width: 100%;
+  min-height: auto;
+}
+
+.pdf-export .professional-sidebar,
+.pdf-export .professional-main {
+  padding: 20px 25px;
+}
+
+.pdf-export .professional-section {
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 /* ===========================================
