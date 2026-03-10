@@ -1,0 +1,444 @@
+/* ===========================================
+   AI-Assisted Resume Generator - Main Styles
+
+   Font Size Reference (configurable in templateConfig.ts):
+   - Name (H1): 18pt
+   - Section Heading (H2): 13pt
+   - Sub Heading (H3): 12pt
+   - Body text: 11pt
+   - Small text: 10pt
+   =========================================== */
+
+/* Reset and Base */
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* ===========================================
+   Resume Preview Container
+   =========================================== */
+
+.resume-preview {
+  background: white;
+  min-height: 100%;
+  padding: 0;
+}
+
+/* ===========================================
+   CLASSIC TEMPLATE - Traditional ATS-Friendly
+   Compact sizing for single-page resumes
+   =========================================== */
+
+.template-classic {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 11pt;
+  line-height: 1.35;
+  color: #000000;
+  background: white;
+  padding: 28px 36px;
+  max-width: 8.5in;
+  margin: 0 auto;
+}
+
+.template-classic h1 {
+  font-size: 20pt;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 4px 0;
+  padding: 0;
+  border: none;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.template-classic h1 + p,
+.template-classic h1 ~ p:first-of-type {
+  text-align: center;
+  margin: 0 0 12px 0;
+  font-size: 10pt;
+  color: #333333;
+}
+
+.template-classic h2 {
+  font-size: 13pt;
+  font-weight: 700;
+  color: #000000;
+  margin: 14px 0 6px 0;
+  padding: 0 0 2px 0;
+  border-bottom: 1px solid #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  page-break-after: avoid;
+}
+
+/* Hide any hr elements that might be rendered */
+.template-classic hr {
+  display: none !important;
+}
+
+.template-classic h3 {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #000000;
+  margin: 8px 0 2px 0;
+  padding: 0;
+  page-break-after: avoid;
+}
+
+.template-classic p {
+  margin: 0 0 4px 0;
+  text-align: left;
+  font-size: 11pt;
+}
+
+.template-classic ul {
+  margin: 2px 0 8px 0;
+  padding-left: 18px;
+  list-style-type: none;
+}
+
+.template-classic li {
+  margin: 2px 0;
+  padding-left: 0;
+  font-size: 11pt;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.template-classic li::before {
+  content: "•";
+  position: absolute;
+  left: -14px;
+  color: #000;
+}
+
+.template-classic strong {
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.template-classic a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* ===========================================
+   MODERN TEMPLATE - Contemporary ATS-Friendly
+   Clean sans-serif, compact layout
+   =========================================== */
+
+.template-modern {
+  font-family: 'Calibri', 'Arial', 'Helvetica Neue', sans-serif;
+  font-size: 11pt;
+  line-height: 1.3;
+  color: #1a1a1a;
+  background: white;
+  padding: 24px 32px;
+  max-width: 8.5in;
+  margin: 0 auto;
+}
+
+.template-modern h1 {
+  font-size: 22pt;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin: 0 0 2px 0;
+  padding: 0;
+  border: none;
+  letter-spacing: -0.3px;
+}
+
+.template-modern h1 + p,
+.template-modern h1 ~ p:first-of-type {
+  margin: 0 0 10px 0;
+  font-size: 10pt;
+  color: #4a5568;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1e3a5f;
+}
+
+.template-modern h2 {
+  font-size: 13pt;
+  font-weight: 600;
+  color: #1e3a5f;
+  margin: 12px 0 6px 0;
+  padding: 0;
+  border: none !important;
+  border-bottom: none !important;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  page-break-after: avoid;
+}
+
+/* Hide any hr elements that might be rendered */
+.template-modern hr {
+  display: none !important;
+}
+
+.template-modern h3 {
+  font-size: 12pt;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 6px 0 1px 0;
+  padding: 0;
+  page-break-after: avoid;
+}
+
+.template-modern p {
+  margin: 0 0 4px 0;
+  font-size: 11pt;
+}
+
+.template-modern ul {
+  margin: 2px 0 6px 0;
+  padding-left: 16px;
+  list-style-type: none;
+}
+
+.template-modern li {
+  margin: 2px 0;
+  padding-left: 0;
+  font-size: 11pt;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.template-modern li::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: #1a1a1a;
+}
+
+.template-modern strong {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 10pt;
+}
+
+.template-modern a {
+  color: #1e3a5f;
+  text-decoration: none;
+}
+
+/* ===========================================
+   MINIMAL TEMPLATE - Ultra Compact ATS-Friendly
+   Maximum content density
+   =========================================== */
+
+.template-minimal {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 10pt;
+  line-height: 1.35;
+  color: #2d2d2d;
+  background: white;
+  padding: 24px 40px;
+  max-width: 8.5in;
+  margin: 0 auto;
+}
+
+.template-minimal h1 {
+  font-size: 18pt;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 2px 0;
+  padding: 0;
+  border: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.template-minimal h1 + p,
+.template-minimal h1 ~ p:first-of-type {
+  margin: 0 0 14px 0;
+  font-size: 9pt;
+  color: #555555;
+  letter-spacing: 0.2px;
+}
+
+.template-minimal h2 {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 14px 0 6px 0;
+  padding: 0;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  page-break-after: avoid;
+}
+
+.template-minimal h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 6px 0 1px 0;
+  padding: 0;
+  page-break-after: avoid;
+}
+
+.template-minimal p {
+  margin: 0 0 4px 0;
+  font-size: 10pt;
+}
+
+.template-minimal ul {
+  margin: 2px 0 8px 0;
+  padding-left: 14px;
+  list-style-type: none;
+}
+
+.template-minimal li {
+  margin: 2px 0;
+  padding-left: 0;
+  position: relative;
+  font-size: 10pt;
+  page-break-inside: avoid;
+}
+
+.template-minimal li::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: #666;
+}
+
+.template-minimal strong {
+  font-weight: 600;
+  font-size: 9pt;
+}
+
+.template-minimal a {
+  color: #2d2d2d;
+  text-decoration: none;
+}
+
+/* ===========================================
+   Print & PDF Styles - Prevent Page Breaks
+   =========================================== */
+
+@media print {
+  .template-classic,
+  .template-modern,
+  .template-minimal {
+    padding: 0.25in 0.4in;
+    margin: 0;
+    max-width: 100%;
+    font-size: 10pt;
+  }
+
+  /* Prevent page breaks after headings */
+  h1, h2, h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Keep content together */
+  h2 + *, h3 + * {
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+  }
+
+  /* Prevent breaking inside list items and paragraphs */
+  li, p {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Keep job entries together */
+  h3, h3 + p, h3 + p + ul {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Orphan and widow control */
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+/* ===========================================
+   PDF Export Specific Styles
+   Applied via html2pdf wrapper
+   =========================================== */
+
+.pdf-export {
+  background: white !important;
+}
+
+.pdf-export h2 {
+  page-break-after: avoid !important;
+  margin-top: 10px !important;
+}
+
+.pdf-export h3 {
+  page-break-after: avoid !important;
+}
+
+.pdf-export li {
+  page-break-inside: avoid !important;
+}
+
+/* Keep sections together - job entry with bullets */
+.pdf-export h3 + p,
+.pdf-export h3 + ul,
+.pdf-export p + ul {
+  page-break-before: avoid !important;
+}
+
+/* ===========================================
+   Prose Overrides for Preview
+   =========================================== */
+
+.prose {
+  max-width: none;
+}
+
+.prose h1 {
+  margin-top: 0;
+}
+
+/* Remove default prose styling when templates are active */
+.template-classic.prose,
+.template-modern.prose,
+.template-minimal.prose {
+  --tw-prose-body: inherit;
+  --tw-prose-headings: inherit;
+  --tw-prose-links: inherit;
+  --tw-prose-bold: inherit;
+  --tw-prose-bullets: inherit;
+  --tw-prose-hr: transparent;
+}
+
+/* Force hide all hr elements in templates */
+.template-classic hr,
+.template-modern hr,
+.template-minimal hr,
+.prose hr {
+  display: none !important;
+  border: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+
+/* Override prose list styles */
+.template-classic.prose ul,
+.template-modern.prose ul,
+.template-minimal.prose ul {
+  list-style-type: none !important;
+}
+
+.template-classic.prose li::marker,
+.template-modern.prose li::marker,
+.template-minimal.prose li::marker {
+  content: none !important;
+}
