@@ -175,25 +175,25 @@ export function ProfessionalPreview({ content }: ProfessionalPreviewProps): Reac
           <div className="professional-contact">
             {contactInfo.location && (
               <div className="professional-contact-item">
-                <span className="professional-icon">&#128205;</span>
+                <span className="material-icons">location_on</span>
                 {contactInfo.location}
               </div>
             )}
             {contactInfo.phone && (
               <div className="professional-contact-item">
-                <span className="professional-icon">&#128222;</span>
+                <span className="material-icons">phone</span>
                 {contactInfo.phone}
               </div>
             )}
             {contactInfo.email && (
               <div className="professional-contact-item">
-                <span className="professional-icon">&#9993;</span>
+                <span className="material-icons">email</span>
                 {contactInfo.email}
               </div>
             )}
             {contactInfo.linkedin && (
               <div className="professional-contact-item">
-                <span className="professional-icon">&#128279;</span>
+                <span className="material-icons">link</span>
                 {contactInfo.linkedin}
               </div>
             )}

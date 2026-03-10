@@ -386,11 +386,11 @@
   margin-bottom: 5px;
 }
 
-.professional-icon {
-  font-size: 14px;
-  margin-right: 8px;
-  width: 18px;
-  text-align: center;
+.professional-contact-item .material-icons {
+  font-size: 16px;
+  margin-right: 6px;
+  color: #555;
+  vertical-align: middle;
 }
 
 /* Sections */
