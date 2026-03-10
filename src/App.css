@@ -72,25 +72,18 @@
   font-weight: 700;
   color: #000000;
   margin: 16px 0 8px 0;
-  padding: 0 0 2px 0;
+  padding: 0 0 6px 0;
   border-bottom: 1px solid #000000;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   page-break-after: avoid;
 }
 
-.template-classic h2::before,
-.template-classic h2::after {
-  display: none !important;
-  content: none !important;
-}
-
-/* Hide any hr elements that might be rendered */
+/* Style hr elements as subtle section dividers */
 .template-classic hr {
-  display: none !important;
-  border: none !important;
-  height: 0 !important;
-  visibility: hidden !important;
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin: 8px 0;
 }
 
 .template-classic h3 {
@@ -179,28 +172,18 @@
   font-weight: 600;
   color: #1e3a5f;
   margin: 16px 0 8px 0;
-  padding: 0;
-  border: none !important;
-  border-bottom: none !important;
+  padding: 0 0 6px 0;
+  border-bottom: 1px solid #1e3a5f;
   text-transform: uppercase;
   letter-spacing: 0.3px;
   page-break-after: avoid;
-  background: none !important;
-  text-decoration: none !important;
 }
 
-.template-modern h2::before,
-.template-modern h2::after {
-  display: none !important;
-  content: none !important;
-}
-
-/* Hide any hr elements that might be rendered */
+/* Style hr elements as subtle section dividers */
 .template-modern hr {
-  display: none !important;
-  border: none !important;
-  height: 0 !important;
-  visibility: hidden !important;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 8px 0;
 }
 
 .template-modern h3 {
@@ -436,31 +419,6 @@
   --tw-prose-links: inherit;
   --tw-prose-bold: inherit;
   --tw-prose-bullets: inherit;
-  --tw-prose-hr: transparent;
-}
-
-/* Force hide all hr elements in templates */
-.template-classic hr,
-.template-modern hr,
-.template-minimal hr,
-.prose hr {
-  display: none !important;
-  border: none !important;
-  height: 0 !important;
-  margin: 0 !important;
-  visibility: hidden !important;
-}
-
-/* Remove any prose pseudo-elements on headings */
-.prose h2::before,
-.prose h2::after,
-.template-classic.prose h2::before,
-.template-classic.prose h2::after,
-.template-modern.prose h2::before,
-.template-modern.prose h2::after {
-  display: none !important;
-  content: none !important;
-  border: none !important;
 }
 
 /* Override prose list styles */
