@@ -25,7 +25,7 @@ export function WelcomeMessage({ isFirstVisit, onDismiss }: WelcomeMessageProps)
     >
       <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          Welcome to AI-Assisted Resume Generator
+          Welcome to AI-Friendly Resume Generator
         </h2>
 
         <div className="space-y-4 text-gray-600">

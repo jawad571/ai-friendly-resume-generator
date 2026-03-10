@@ -35,7 +35,7 @@ beforeEach(() => {
   })
 })
 
-describe('Phase 2: AI-Assisted Workflow - App Integration', () => {
+describe('Phase 2: AI-Friendly Workflow - App Integration', () => {
   beforeEach(() => {
     localStorage.clear()
     // Mark as visited to skip welcome message

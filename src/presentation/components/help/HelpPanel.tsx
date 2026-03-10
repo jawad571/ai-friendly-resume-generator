@@ -118,7 +118,7 @@ export function HelpPanel({ isOpen, onClose }: HelpPanelProps) {
 
           {activeTab === 'workflow' && (
             <div data-testid="workflow-content">
-              <h3 className="text-lg font-semibold mb-4">AI-Assisted Workflow Guide</h3>
+              <h3 className="text-lg font-semibold mb-4">AI-Friendly Workflow Guide</h3>
               <p className="mb-4 text-gray-700">
                 This tool is designed to work WITH external LLMs like ChatGPT, Claude, or Gemini
                 to help you create professional resumes. Follow these steps:

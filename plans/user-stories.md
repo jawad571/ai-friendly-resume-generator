@@ -1,8 +1,8 @@
-# User Stories: AI-Assisted Resume Generator
+# User Stories: AI-Friendly Resume Generator
 
 **Document Version:** 1.0
 **Date:** 2026-03-10
-**Project:** AI-Assisted Resume Generator (Client-Side)
+**Project:** AI-Friendly Resume Generator (Client-Side)
 
 ---
 
@@ -20,7 +20,7 @@
 
 Users face a dual-burden when creating resumes: managing both content (professional information) and format (visual presentation). This tool eliminates the formatting burden by separating content from presentation. Users write resume content in Markdown following a defined schema, see real-time HTML preview, and export professional PDFs with multiple template options.
 
-**The "AI-Assisted" Model:** This tool enables users to leverage external LLMs (ChatGPT, Claude, etc.) for content generation. Users share the tool's markdown schema with any LLM, which generates content following that structure. Users then paste the LLM output directly into the tool, which handles all formatting, templates, and PDF generation. This separation of concerns (LLM = content expert, Tool = format expert) defines the AI-assistance model.
+**The "AI-Friendly" Model:** This tool enables users to leverage external LLMs (ChatGPT, Claude, etc.) for content generation. Users share the tool's markdown schema with any LLM, which generates content following that structure. Users then paste the LLM output directly into the tool, which handles all formatting, templates, and PDF generation. This separation of concerns (LLM = content expert, Tool = format expert) defines the AI-assistance model.
 
 ---
 
@@ -51,7 +51,7 @@ Stories are organized into the following epics:
 - **Epic 2: Real-Time Preview** - Live HTML rendering and viewing
 - **Epic 3: Template System** - Multiple templates and switching
 - **Epic 4: PDF Export** - Professional PDF generation
-- **Epic 5: AI-Assisted Workflow** - Schema sharing and LLM integration support
+- **Epic 5: AI-Friendly Workflow** - Schema sharing and LLM integration support
 - **Epic 6: User Onboarding & Help** - Guidance and documentation
 - **Epic 7: Data Management** - Import/export and backup
 - **Epic 8: Enhanced User Experience** - Polish and quality-of-life improvements
@@ -462,7 +462,7 @@ Stories are organized into the following epics:
 
 ---
 
-### Epic 5: AI-Assisted Workflow
+### Epic 5: AI-Friendly Workflow
 
 #### Story 5.1: Access Schema Template
 
@@ -513,14 +513,14 @@ Stories are organized into the following epics:
 **So that** I can leverage LLMs to help write my resume content
 
 **Acceptance Criteria:**
-- User can access instructions explaining the AI-assisted workflow
+- User can access instructions explaining the AI-friendly workflow
 - Instructions clearly state the tool works WITH external LLMs, not as replacement
 - Workflow is explained in simple steps (1. Share schema with LLM, 2. Paste output, 3. Export)
 - Instructions mention compatible LLMs (ChatGPT, Claude, Gemini, etc.)
 - User can access instructions without losing current work
 
 **Definition of Done:**
-- Help section includes "AI-Assisted Workflow" or similar heading
+- Help section includes "AI-Friendly Workflow" or similar heading
 - Instructions are written in plain language
 - Workflow steps are numbered and easy to follow
 - User understands how to use external LLMs with the tool
@@ -1337,8 +1337,8 @@ Stories are organized into the following epics:
 
 ---
 
-### Phase 2: AI-Assisted Workflow - Key Differentiator
-**Goal:** Enable the AI-assisted workflow that differentiates this tool
+### Phase 2: AI-Friendly Workflow - Key Differentiator
+**Goal:** Enable the AI-friendly workflow that differentiates this tool
 
 **Priority 2 - Critical for Product Identity:**
 11. Story 5.1: Access Schema Template
@@ -1348,7 +1348,7 @@ Stories are organized into the following epics:
 15. Story 6.4: View Schema Documentation
 16. Story 6.5: View Example Resume
 
-**Rationale:** These stories enable the "AI-assisted" value proposition, allowing users to leverage external LLMs. This is the product's unique angle and should be delivered early to validate the concept.
+**Rationale:** These stories enable the "AI-friendly" value proposition, allowing users to leverage external LLMs. This is the product's unique angle and should be delivered early to validate the concept.
 
 ---
 
@@ -1462,7 +1462,7 @@ Stories are organized into the following epics:
 
 **Risk Reduction Approach:**
 - Phase 1 validates technical feasibility (PDF generation, real-time preview)
-- Phase 2 validates unique value proposition (AI-assisted workflow)
+- Phase 2 validates unique value proposition (AI-friendly workflow)
 - Early phases deliver end-to-end value incrementally
 
 **User Value Delivery:**
@@ -1478,7 +1478,7 @@ Stories are organized into the following epics:
 
 **Learning Opportunities:**
 - Early user feedback on Markdown acceptance (Phase 1)
-- Validation of AI-assisted workflow value (Phase 2)
+- Validation of AI-friendly workflow value (Phase 2)
 - Understanding template preferences (Phase 3)
 - Identifying common validation errors (Phase 5)
 
@@ -1486,7 +1486,7 @@ Stories are organized into the following epics:
 
 ## Summary
 
-This user story set decomposes the AI-Assisted Resume Generator into 59 granular, implementable stories organized across 11 epics. The decomposition follows the Elephant Carpaccio technique, creating thin vertical slices that each deliver end-to-end value.
+This user story set decomposes the AI-Friendly Resume Generator into 59 granular, implementable stories organized across 11 epics. The decomposition follows the Elephant Carpaccio technique, creating thin vertical slices that each deliver end-to-end value.
 
 **Key Decomposition Principles Applied:**
 
@@ -1510,7 +1510,7 @@ This user story set decomposes the AI-Assisted Resume Generator into 59 granular
 
 - **Professional Output:** Epic 4 stories ensure PDF exports meet professional standards suitable for job applications
 
-- **AI-Assisted Value Proposition:** Epic 5 stories enable the unique workflow where external LLMs generate content and the tool handles formatting
+- **AI-Friendly Value Proposition:** Epic 5 stories enable the unique workflow where external LLMs generate content and the tool handles formatting
 
 - **User Confidence:** Epics 6-7 build user confidence through help, examples, validation, and data safety
 
@@ -1521,7 +1521,7 @@ This user story set decomposes the AI-Assisted Resume Generator into 59 granular
 The 9-phase prioritization sequence focuses on:
 1. Proving core technical feasibility first (PDF generation, real-time preview)
 2. Delivering minimum viable end-to-end value quickly
-3. Validating the unique "AI-assisted" value proposition early
+3. Validating the unique "AI-friendly" value proposition early
 4. Building trust through data safety features
 5. Progressively enhancing usability and accessibility
 6. Optimizing performance after core features work
@@ -1536,5 +1536,5 @@ This approach allows rapid validation of risky assumptions, early user feedback 
 1. Review and refine stories with development team to ensure technical feasibility
 2. Estimate story points for sprint planning
 3. Begin Phase 1 MVP development with Stories 1-10
-4. Conduct user testing after Phase 2 to validate AI-assisted workflow
+4. Conduct user testing after Phase 2 to validate AI-friendly workflow
 5. Iterate on prioritization based on user feedback and technical discoveries

@@ -16,6 +16,7 @@ import { HelpPanel } from './presentation/components/help/HelpPanel'
 import { TemplateSelector } from './presentation/components/templates/TemplateSelector'
 import { ImportExportButtons } from './presentation/components/import-export/ImportExportButtons'
 import { TemplateProvider, useTemplate } from './presentation/context/TemplateContext'
+import { Logo } from './presentation/components/common/Logo'
 import { LocalStorageAdapter } from './infrastructure/storage/LocalStorageAdapter'
 import { PdfExporter } from './infrastructure/exporters/PdfExporter'
 import type { TemplateId } from './templates'
@@ -103,8 +104,8 @@ function AppContent() {
   return (
     <div className="h-screen w-screen flex flex-col">
       <WelcomeMessage isFirstVisit={isFirstVisit} onDismiss={handleDismissWelcome} />
-      <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">AI-Assisted Resume Generator</h1>
+      <header className="bg-gray-800 text-white p-3 flex justify-between items-center">
+        <Logo />
         <div className="flex gap-2">
           <ImportExportButtons
             content={content}

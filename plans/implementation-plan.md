@@ -1,8 +1,8 @@
-# Implementation Plan: AI-Assisted Resume Generator
+# Implementation Plan: AI-Friendly Resume Generator
 
 **Document Version:** 1.0
 **Date:** 2026-03-10
-**Project:** AI-Assisted Resume Generator (Client-Side)
+**Project:** AI-Friendly Resume Generator (Client-Side)
 
 ---
 
@@ -27,7 +27,7 @@
 
 ### 1.1 Project Overview
 
-The AI-Assisted Resume Generator is a client-side web application that separates resume content from presentation. Users write content in structured Markdown, preview it in real-time with multiple templates, and export professional PDFs. The "AI-assisted" aspect enables users to leverage external LLMs (ChatGPT, Claude, etc.) to generate schema-compliant content.
+The AI-Friendly Resume Generator is a client-side web application that separates resume content from presentation. Users write content in structured Markdown, preview it in real-time with multiple templates, and export professional PDFs. The "AI-friendly" aspect enables users to leverage external LLMs (ChatGPT, Claude, etc.) to generate schema-compliant content.
 
 ### 1.2 Architecture Philosophy
 
@@ -162,7 +162,7 @@ Relationships between bounded contexts:
 **AI Integration Context:**
 - **Schema Template**: Example Markdown structure for LLMs
 - **LLM Prompt**: Suggested instructions for AI content generation
-- **Workflow Guide**: Step-by-step instructions for AI-assisted usage
+- **Workflow Guide**: Step-by-step instructions for AI-friendly usage
 
 ---
 
@@ -1291,7 +1291,7 @@ Week 3:
 - [ ] End-to-end testing
 ```
 
-### Phase 2: AI-Assisted Workflow (Weeks 4-5)
+### Phase 2: AI-Friendly Workflow (Weeks 4-5)
 
 **Goal:** Implement differentiating feature enabling LLM collaboration.
 
@@ -1857,7 +1857,7 @@ function migrate(stored: StoredResume): StoredResume {
 ### 10.1 Project Structure
 
 ```
-ai-assisted-resume-generator/
+ai-friendly-resume-generator/
 ├── public/
 │   ├── index.html
 │   ├── manifest.json (PWA)
@@ -2363,7 +2363,7 @@ Phone: (555) 123-4567
 // tests/e2e/ai-workflow.spec.ts
 import { test, expect } from '@playwright/test'
 
-test.describe('AI-Assisted Workflow', () => {
+test.describe('AI-Friendly Workflow', () => {
     test('user can copy schema template', async ({ page, context }) => {
         await context.grantPermissions(['clipboard-read', 'clipboard-write'])
         await page.goto('/')
@@ -2758,7 +2758,7 @@ Risk Register:
 
 ## Conclusion
 
-This implementation plan provides a comprehensive, DDD-informed roadmap for building the AI-Assisted Resume Generator. Key takeaways:
+This implementation plan provides a comprehensive, DDD-informed roadmap for building the AI-Friendly Resume Generator. Key takeaways:
 
 1. **Domain-Driven Design** principles apply even to client-side apps through careful bounded context identification and domain modeling.
 

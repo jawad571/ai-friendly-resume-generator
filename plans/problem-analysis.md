@@ -1,14 +1,14 @@
-# Problem Analysis: AI-Assisted Resume Generator
+# Problem Analysis: AI-Friendly Resume Generator
 
 **Document Version:** 1.0
 **Date:** 2026-03-10
-**Project:** AI-Assisted Resume Generator (Client-Side)
+**Project:** AI-Friendly Resume Generator (Client-Side)
 
 ---
 
 ## 1. Executive Summary
 
-This document provides a comprehensive analysis of the problem domain for an AI-assisted resume generator tool. The tool aims to eliminate the formatting burden from resume creation and maintenance, allowing users to focus exclusively on content while the system handles visual presentation, template selection, and export functionality entirely on the client side.
+This document provides a comprehensive analysis of the problem domain for an AI-friendly resume generator tool. The tool aims to eliminate the formatting burden from resume creation and maintenance, allowing users to focus exclusively on content while the system handles visual presentation, template selection, and export functionality entirely on the client side.
 
 ---
 
@@ -154,10 +154,10 @@ This document provides a comprehensive analysis of the problem domain for an AI-
 - Can share schema with any LLM and get paste-ready output
 - LLM-generated content renders correctly without manual fixes
 - Workflow is intuitive: LLM → Paste → Preview → Export
-- UI clearly explains this "AI-assisted" workflow
+- UI clearly explains this "AI-friendly" workflow
 
-**Key Insight - The "AI-Assisted" Value Proposition:**
-This tool is "AI-assisted" NOT through native AI integration, but by providing a standardized schema that enables seamless LLM collaboration:
+**Key Insight - The "AI-Friendly" Value Proposition:**
+This tool is "AI-friendly" NOT through native AI integration, but by providing a standardized schema that enables seamless LLM collaboration:
 1. User shares the markdown schema/template with their preferred LLM
 2. LLM focuses purely on content (what to say, how to phrase it, what to include)
 3. User pastes LLM output directly into the tool
@@ -361,7 +361,7 @@ This separation of concerns (LLM = content expert, Tool = format expert) is the 
 - File size must be reasonable for email/upload
 - Generated PDF must be valid and openable
 
-### 5.5 AI-Assisted Workflow Communication Requirements
+### 5.5 AI-Friendly Workflow Communication Requirements
 
 **FR-18: Schema Export/Copy Feature**
 - User must be able to easily copy/export the markdown schema template
@@ -370,7 +370,7 @@ This separation of concerns (LLM = content expert, Tool = format expert) is the 
 - Schema template should be self-documenting with examples
 
 **FR-19: LLM Workflow Guidance**
-- UI must clearly explain the "AI-assisted" workflow to users
+- UI must clearly explain the "AI-friendly" workflow to users
 - Onboarding or help section explaining: "Share schema with any AI → Paste output here"
 - Visual indication that the tool works WITH external LLMs, not as a replacement
 - Suggested prompts or instructions users can give to LLMs
@@ -1152,7 +1152,7 @@ The following items are explicitly OUT OF SCOPE for this project:
 - No built-in AI for content generation or suggestions
 - No API calls to OpenAI, Anthropic, or other AI providers
 - No skills suggestions or job description generation within the tool
-- **CLARIFICATION:** The tool IS "AI-assisted" through its design - users leverage EXTERNAL LLMs (ChatGPT, Claude, etc.) to generate content using the tool's schema, then paste results into the tool. The tool's value is enabling this workflow, not replacing it with native AI.
+- **CLARIFICATION:** The tool IS "AI-friendly" through its design - users leverage EXTERNAL LLMs (ChatGPT, Claude, etc.) to generate content using the tool's schema, then paste results into the tool. The tool's value is enabling this workflow, not replacing it with native AI.
 
 **OOS-2: Collaborative Editing**
 - No multi-user editing
@@ -1282,7 +1282,7 @@ The following items are explicitly OUT OF SCOPE for this project:
 
 **Q-20:** What example content should be provided? Should we include placeholder content or start empty?
 
-### 15.5 AI-Assisted Workflow Questions
+### 15.5 AI-Friendly Workflow Questions
 
 **Q-26:** How prominently should the LLM workflow be explained in the UI? Should it be the primary onboarding message or a secondary feature?
 

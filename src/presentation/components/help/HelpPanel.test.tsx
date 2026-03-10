@@ -166,7 +166,7 @@ describe('Story 5.2: Copy Schema to Clipboard - HelpPanel', () => {
 })
 
 describe('Story 5.3: View LLM Workflow Instructions - HelpPanel', () => {
-  describe('Given a user wants to understand the AI-assisted workflow', () => {
+  describe('Given a user wants to understand the AI-friendly workflow', () => {
     describe('When they click on the Workflow tab', () => {
       it('Then it should display workflow instructions', async () => {
         const user = userEvent.setup()
