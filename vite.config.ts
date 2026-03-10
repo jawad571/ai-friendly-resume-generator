@@ -6,7 +6,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   // Base path for GitHub Pages deployment
-  base: process.env.GITHUB_ACTIONS ? '/ai-assisted-resume-generator/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/ai-friendly-resume-generator/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
