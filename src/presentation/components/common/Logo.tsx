@@ -4,10 +4,12 @@
  * Displays the AI-Friendly Resume Generator logo with icon and text.
  */
 
+const faviconUrl = `${import.meta.env.BASE_URL}favicon.svg`
+
 export function Logo() {
   return (
     <div className="flex items-center gap-3">
-      <img src="/favicon.svg" alt="" className="h-10 w-10" />
+      <img src={faviconUrl} alt="" className="h-10 w-10" />
       <div className="flex flex-col leading-tight">
         <span className="text-lg font-bold tracking-tight">
           <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">AI-</span>
