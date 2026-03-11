@@ -18,8 +18,8 @@ interface Section {
   content: string
 }
 
-// Sections that go in the sidebar
-const SIDEBAR_SECTIONS = ['skills', 'languages', 'affiliations', 'certifications', 'interests', 'hobbies']
+// Sections that go in the sidebar (left column)
+const SIDEBAR_SECTIONS = ['skills', 'languages', 'affiliations']
 
 function parseMarkdownSections(markdown: string): {
   header: { name: string; subtitle: string; contact: string }
@@ -99,7 +99,15 @@ function parseMarkdownSections(markdown: string): {
 }
 
 function renderSectionContent(content: string): string {
-  return marked.parse(content.trim(), { async: false }) as string
+  const html = marked.parse(content.trim(), { async: false }) as string
+
+  // Wrap each job entry (h3 + following content until next h3) in a div for page break control
+  const wrapped = html.replace(
+    /(<h3>[\s\S]*?)(?=<h3>|$)/g,
+    '<div class="job-entry" style="page-break-inside: avoid; break-inside: avoid;">$1</div>'
+  )
+
+  return wrapped
 }
 
 function parseContactInfo(contact: string): { location?: string; phone?: string; email?: string; linkedin?: string; other: string[] } {
@@ -107,9 +115,12 @@ function parseContactInfo(contact: string): { location?: string; phone?: string;
 
   const parts = contact.split(/[|\n]/).map(p => p.trim()).filter(Boolean)
 
+  // Email regex - matches most email formats
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
   for (const part of parts) {
     const lower = part.toLowerCase()
-    if (lower.includes('@') && (lower.includes('.com') || lower.includes('.org') || lower.includes('.net') || lower.includes('.edu'))) {
+    if (emailRegex.test(part) || (part.includes('@') && part.includes('.'))) {
       result.email = part
     } else if (lower.includes('linkedin')) {
       result.linkedin = part

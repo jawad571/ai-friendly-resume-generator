@@ -337,24 +337,29 @@
   width: 210mm;
   min-height: 297mm;
   margin: 0 auto;
-  display: flex;
+  display: table;
+  table-layout: fixed;
   font-family: 'Roboto', 'Segoe UI', 'Arial', sans-serif;
   background: #fff;
 }
 
 /* Sidebar - Left Column (30%) */
 .professional-sidebar {
+  display: table-cell;
   width: 30%;
   background: #f5f5f5;
   padding: 30px;
   box-sizing: border-box;
+  vertical-align: top;
 }
 
 /* Main - Right Column (70%) */
 .professional-main {
+  display: table-cell;
   width: 70%;
   padding: 30px 40px;
   box-sizing: border-box;
+  vertical-align: top;
 }
 
 /* Name */
@@ -409,15 +414,23 @@
 
 /* Sidebar content */
 .professional-sidebar .professional-section-content ul {
-  padding-left: 15px;
+  padding-left: 16px;
   margin: 0;
-  list-style-type: disc;
+  list-style-type: none;
 }
 
 .professional-sidebar .professional-section-content li {
   margin-bottom: 6px;
   font-size: 13px;
   line-height: 1.4;
+  position: relative;
+}
+
+.professional-sidebar .professional-section-content li::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: #555;
 }
 
 /* Main content */
@@ -435,15 +448,23 @@
 }
 
 .professional-main .professional-section-content ul {
-  padding-left: 18px;
+  padding-left: 16px;
   margin: 4px 0 12px 0;
-  list-style-type: disc;
+  list-style-type: none;
 }
 
 .professional-main .professional-section-content li {
   margin-bottom: 4px;
   font-size: 13px;
   line-height: 1.4;
+  position: relative;
+}
+
+.professional-main .professional-section-content li::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: #333;
 }
 
 .professional-main .professional-section-content strong {
@@ -535,20 +556,77 @@
   page-break-before: avoid !important;
 }
 
-/* Professional Template PDF Export */
+/* Professional Template PDF Export - Keep two columns with table layout */
+.pdf-export.template-professional-wrapper {
+  background: linear-gradient(to right, #f5f5f5 30%, #fff 30%);
+}
+
 .pdf-export .professional-page {
   width: 100%;
   min-height: auto;
+  display: table;
+  table-layout: fixed;
+  background: linear-gradient(to right, #f5f5f5 30%, #fff 30%);
 }
 
-.pdf-export .professional-sidebar,
+.pdf-export .professional-sidebar {
+  display: table-cell;
+  width: 30%;
+  padding: 20px;
+  background: transparent;
+  vertical-align: top;
+}
+
 .pdf-export .professional-main {
-  padding: 20px 25px;
+  display: table-cell;
+  width: 70%;
+  padding: 20px 30px;
+  background: transparent;
+  vertical-align: top;
+}
+
+/* Job entries - keep title, meta, and bullets together */
+.pdf-export .professional-section-content h3,
+.pdf-export .professional-section-content h3 + p,
+.pdf-export .professional-section-content h3 + p + ul,
+.pdf-export .professional-section-content h3 + em,
+.pdf-export .professional-section-content h3 + em + ul {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
 }
 
 .pdf-export .professional-section {
-  page-break-inside: avoid;
-  break-inside: avoid;
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.pdf-export .professional-section-content {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.pdf-export .professional-section-content li {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.pdf-export .professional-name,
+.pdf-export .professional-subtitle,
+.pdf-export .professional-contact {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+/* Job entries wrapper */
+.job-entry {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+  margin-bottom: 12px;
+}
+
+.pdf-export .job-entry {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
 }
 
 /* ===========================================

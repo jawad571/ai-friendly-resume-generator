@@ -56,4 +56,16 @@ Results-driven software engineer with 5+ years of experience building scalable w
 
 - AWS Certified Solutions Architect - Associate | Amazon Web Services | 2023
 - Professional Scrum Master I | Scrum.org | 2022
+
+## Languages
+
+- English (Native)
+- Spanish (Professional)
+- French (Conversational)
+
+## Affiliations
+
+- Association for Computing Machinery (ACM)
+- IEEE Computer Society
+- San Francisco Tech Professionals Network
 `;

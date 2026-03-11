@@ -45,8 +45,13 @@ export class PdfExporter {
       // Clone and prepare element for PDF export
       const clone = element.cloneNode(true) as HTMLElement
 
-      // Wrap sections to help with page breaks
-      this.wrapSectionsForPdf(clone)
+      // Check if this is a Professional template (two-column layout)
+      const isProfessionalTemplate = clone.querySelector('.professional-page') !== null
+
+      // Only wrap sections for single-column templates
+      if (!isProfessionalTemplate) {
+        this.wrapSectionsForPdf(clone)
+      }
 
       // Add PDF-specific class for compact styling
       clone.classList.add('pdf-export')
@@ -132,7 +137,7 @@ export class PdfExporter {
       // Page break control
       pagebreak: {
         mode: ['avoid-all', 'css', 'legacy'],
-        avoid: ['.pdf-section', '.pdf-header', 'h1', 'h2', 'h3'],
+        avoid: ['.pdf-section', '.pdf-header', '.professional-section', '.job-entry', 'h1', 'h2', 'h3'],
       },
     }
   }
